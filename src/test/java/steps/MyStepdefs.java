@@ -28,6 +28,7 @@ public class MyStepdefs {
     @Then("new post has been created")
     public void newPostMustBeCreated() {
         System.out.println("New Post has been created");
+        System.out.println("Hi");
 
     }
 
