@@ -1,4 +1,3 @@
-pipeline{
 node{
     stage('SCM checkout'){
     def mvnHome = tool name: 'M3', type: 'maven'
@@ -8,4 +7,4 @@ node{
         sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
     }
 }
-}    
+    
