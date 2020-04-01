@@ -4,7 +4,7 @@ node{
     git 'https://github.com/vicky2315/FinalRepo'
     }
     stage('Compile package'){
-        sh "${mvnHome}/bin/mvn package"
+        sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
     }
  }
     
