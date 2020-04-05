@@ -19,6 +19,7 @@ Given  user sets base URI of JSON server
       | 15 | Vignesh | RoaldDahl |
       | 21 | 21 Savage | YG      |
       | 50 | no        | icant   |
+
 @delete
   Scenario Outline: Deleting a post using DELETE Method
     When user performs DELETE for deleting post
