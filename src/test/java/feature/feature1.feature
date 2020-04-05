@@ -1,7 +1,7 @@
 Feature: Requests on JSON server
 Background:
 Given  user sets base URI of JSON server
-
+  @get
   Scenario Outline: GET operation
     When user performs GET for post  number "<id>"
     Then author name must say "<author>"
@@ -9,9 +9,9 @@ Given  user sets base URI of JSON server
     | id | author |
     | 1  | testing |
     | 2  | unicode |
-
+  @post
   Scenario Outline: Adding new post using POST Method
-    When user performs POST for creating post
+    When user performs POST for creating post 
     And new "<id>","<name>" and "<author>" are passed
     Then new post has been created
     Examples:
@@ -19,10 +19,10 @@ Given  user sets base URI of JSON server
       | 15 | Vignesh | RoaldDahl |
       | 21 | 21 Savage | YG      |
       | 50 | no        | icant   |
-
+@delete
   Scenario Outline: Deleting a post using DELETE Method
     When user performs DELETE for deleting post
     Then post with "<id>" must be deleted
     Examples:
       | id |
-      | 15 |
+      | 50 |
